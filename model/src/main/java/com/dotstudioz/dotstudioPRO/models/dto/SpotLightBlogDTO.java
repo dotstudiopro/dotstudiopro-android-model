@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 public class SpotLightBlogDTO implements Serializable {
     private String id;
+    private String blogSlug;
     private String blogTitle;
     private String postTitle;
     private String postExcerpt;
@@ -26,6 +27,14 @@ public class SpotLightBlogDTO implements Serializable {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getBlogSlug() {
+        return blogSlug;
+    }
+
+    public void setBlogSlug(String blogSlug) {
+        this.blogSlug = blogSlug;
     }
 
     public String getBlogTitle() {

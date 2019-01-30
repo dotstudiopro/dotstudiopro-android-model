@@ -1,9 +1,12 @@
 
 package com.dotstudioz.dotstudioPRO.models.dto;
 
+import org.json.JSONArray;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by Admin on 15-04-2015.
@@ -32,6 +35,10 @@ public class SpotLightChannelDTO implements Serializable {
     private List<String> playlist = new ArrayList<String>();
     private List<String> videoCompanyIdList = new ArrayList<String>();
 
+
+
+    private JSONArray categoriesJSONArray;
+
     private boolean isSeasonsPresent = false;
     private int numberOfSeasons;
     private List<SpotLightChannelDTO> seasonsList = new ArrayList<SpotLightChannelDTO>();
@@ -39,6 +46,8 @@ public class SpotLightChannelDTO implements Serializable {
     private List<VideoInfoDTO> videoInfoDTOList = new ArrayList<VideoInfoDTO>();
 
     private int categoryWeight;
+
+    private boolean unlocked = false;
 
     public String getId() {
         return id;
@@ -258,6 +267,21 @@ public class SpotLightChannelDTO implements Serializable {
 
     public void setVideoInfoDTOList(List<VideoInfoDTO> videoInfoDTOList) {
         this.videoInfoDTOList = videoInfoDTOList;
+    }
+
+    public boolean isUnlocked() {
+        return unlocked;
+    }
+
+    public void setUnlocked(boolean unlocked) {
+        this.unlocked = unlocked;
+    }
+    public JSONArray getCategoriesJSONArray() {
+        return categoriesJSONArray;
+    }
+
+    public void setCategoriesJSONArray(JSONArray categoriesJSONArray) {
+        this.categoriesJSONArray = categoriesJSONArray;
     }
 
     @Override

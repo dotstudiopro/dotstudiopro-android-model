@@ -2,6 +2,7 @@ package com.dotstudioz.dotstudioPRO.models.dto;
 
 import android.graphics.Bitmap;
 
+import org.json.JSONArray;
 
 import java.util.ArrayList;
 
@@ -99,6 +100,9 @@ public class VideoInfoDTO {
     private boolean isServerSideAdsEnabled;
 
 
+    private int applePriceTier;
+
+    private PresellDTO presellDTO = new PresellDTO();
 
 
 
@@ -693,5 +697,28 @@ public class VideoInfoDTO {
 
     public void setServerSideAdsEnabled(boolean serverSideAdsEnabled) {
         isServerSideAdsEnabled = serverSideAdsEnabled;
+    }
+
+
+    public int getApplePriceTier() {
+        return applePriceTier;
+    }
+
+    public void setApplePriceTier(int applePriceTier) {
+        this.applePriceTier = applePriceTier;
+    }
+
+    public PresellDTO getPresellDTO() {
+        return presellDTO;
+    }
+
+    public void setPresellDTO(PresellDTO presellDTO) {
+        this.presellDTO = presellDTO;
+    }
+
+    public class PresellDTO {
+        public String streamStart;
+        public String streamEnd;
+        public String rentalPrice;
     }
 }
