@@ -35,6 +35,9 @@ public class SpotLightChannelDTO implements Serializable {
     private List<String> playlist = new ArrayList<String>();
     private List<String> videoCompanyIdList = new ArrayList<String>();
 
+    //adding this variable to sort the channels inside a category manually
+    private int weight;
+
 
 
     private JSONArray categoriesJSONArray;
@@ -282,6 +285,14 @@ public class SpotLightChannelDTO implements Serializable {
 
     public void setCategoriesJSONArray(JSONArray categoriesJSONArray) {
         this.categoriesJSONArray = categoriesJSONArray;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     @Override
