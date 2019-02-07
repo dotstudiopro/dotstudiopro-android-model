@@ -37,6 +37,7 @@ public class SpotLightChannelDTO implements Serializable {
 
     //adding this variable to sort the channels inside a category manually
     private int weight;
+    private String catSlugChanSlugWeight;
 
 
 
@@ -293,6 +294,14 @@ public class SpotLightChannelDTO implements Serializable {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public String getCatSlugChanSlugWeight() {
+        return catSlugChanSlugWeight;
+    }
+
+    public void setCatSlugChanSlugWeight(String catSlugChanSlugWeight) {
+        this.catSlugChanSlugWeight = catSlugChanSlugWeight;
     }
 
     @Override
