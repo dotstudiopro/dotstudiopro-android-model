@@ -14,6 +14,8 @@ public class RecommendedItemDTO {
     private int videoDuration;
     private int videoPausedPoint;
     private String slug;
+    private boolean isProduct;
+
 
     public String getId() {
         return id;
@@ -93,5 +95,13 @@ public class RecommendedItemDTO {
 
     public void setSlug(String slug) {
         this.slug = slug;
+    }
+
+    public boolean isProduct() {
+        return isProduct;
+    }
+
+    public void setProduct(boolean product) {
+        isProduct = product;
     }
 }

@@ -9,6 +9,7 @@ public class ChannelMyListDTO {
     private String spotlightPoster;
     private String slug;
     private String categoryName;
+    private boolean isProduct;
 
     private String parentCategorySlug;
 
@@ -81,5 +82,12 @@ public class ChannelMyListDTO {
 
     public void setSlug(String slug) {
         this.slug = slug;
+    }
+    public boolean isProduct() {
+        return isProduct;
+    }
+
+    public void setProduct(boolean product) {
+        isProduct = product;
     }
 }
