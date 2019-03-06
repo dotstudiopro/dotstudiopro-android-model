@@ -1,5 +1,7 @@
 package com.dotstudioz.dotstudioPRO.models.dto;
 
+import java.util.ArrayList;
+
 public class ChannelMyListDTO {
 
     private String id;
@@ -10,6 +12,8 @@ public class ChannelMyListDTO {
     private String slug;
     private String categoryName;
     private boolean isProduct;
+    private ArrayList<String> categoriesArrayList = new ArrayList<>();
+    private ChannelMyListDTO parentChannelMyListDTO = new ChannelMyListDTO();
 
     private String parentCategorySlug;
 
@@ -89,5 +93,21 @@ public class ChannelMyListDTO {
 
     public void setProduct(boolean product) {
         isProduct = product;
+    }
+
+    public ArrayList<String> getCategoriesArrayList() {
+        return categoriesArrayList;
+    }
+
+    public void setCategoriesArrayList(ArrayList<String> categoriesArrayList) {
+        this.categoriesArrayList = categoriesArrayList;
+    }
+
+    public ChannelMyListDTO getParentChannelMyListDTO() {
+        return parentChannelMyListDTO;
+    }
+
+    public void setParentChannelMyListDTO(ChannelMyListDTO parentChannelMyListDTO) {
+        this.parentChannelMyListDTO = parentChannelMyListDTO;
     }
 }
