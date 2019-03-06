@@ -11,6 +11,7 @@ public class SearchResultDTO {
     private String title;
     private String seriesTitle;
     private String casting;
+    private boolean isProduct;
 
     public String getId() {
         return id;
@@ -66,5 +67,13 @@ public class SearchResultDTO {
 
     public void setCasting(String casting) {
         this.casting = casting;
+    }
+
+    public boolean isProduct() {
+        return isProduct;
+    }
+
+    public void setProduct(boolean product) {
+        isProduct = product;
     }
 }
