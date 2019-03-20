@@ -3,6 +3,7 @@ package com.dotstudioz.dotstudioPRO.models.dto;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Admin on 15-04-2015.
@@ -33,8 +34,11 @@ public class SpotLightCategoriesDTO implements Serializable {
     private boolean hasChildCategory;
     private int parentId;
 
+    public interface Callback {
+        void didUpdateUI();
+    }
 
-
+    private Callback mCallback;
     private boolean isChannelPosterAssignedToCategoriesPoster = false;
     private ArrayList<SpotLightCategoriesDTO> childrenSpotLightCategoriesDTOList = new ArrayList<>();
 
@@ -81,7 +85,12 @@ public class SpotLightCategoriesDTO implements Serializable {
     }
 
     public void setSpotLightChannelDTOList(List<SpotLightChannelDTO> spotLightChannelDTOList) {
+        this.spotLightChannelDTOList.clear();
         this.spotLightChannelDTOList = spotLightChannelDTOList;
+        if(mCallback != null)
+        {
+            mCallback.didUpdateUI();
+        }
     }
 
     public String getCompanyId() {
@@ -273,5 +282,13 @@ public class SpotLightCategoriesDTO implements Serializable {
 
     public void setChannelPosterAssignedToCategoriesPoster(boolean channelPosterAssignedToCategoriesPoster) {
         isChannelPosterAssignedToCategoriesPoster = channelPosterAssignedToCategoriesPoster;
+    }
+
+    public Callback getmCallback() {
+        return mCallback;
+    }
+
+    public void setmCallback(Callback mCallback) {
+        this.mCallback = mCallback;
     }
 }
