@@ -1,9 +1,11 @@
 package com.dotstudioz.dotstudioPRO.models.dto;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 15-06-2016.
  */
-public class AdDTO {
+public class AdDTO implements Serializable {
     public static String PRE_OFFSET = "pre";
     public static String POST_OFFSET = "post";
     public static String MID_OFFSET = "mid";

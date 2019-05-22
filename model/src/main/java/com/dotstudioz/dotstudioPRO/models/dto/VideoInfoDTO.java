@@ -4,12 +4,13 @@ import android.graphics.Bitmap;
 
 import org.json.JSONArray;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Admin on 18-04-2015.
  */
-public class VideoInfoDTO {
+public class VideoInfoDTO implements Serializable {
     private String videoID;
     private int videoDuration;
     private String videoTitle = "";
@@ -716,7 +717,7 @@ public class VideoInfoDTO {
         this.presellDTO = presellDTO;
     }
 
-    public class PresellDTO {
+    public class PresellDTO implements Serializable {
         public String streamStart;
         public String streamEnd;
         public String rentalPrice;
