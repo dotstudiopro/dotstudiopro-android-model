@@ -29,6 +29,7 @@ public class CategoriesDTO implements Serializable {
     private String spotlightCompanyId;
     private boolean isVideoList = false;
     private ArrayList<VideoInfoDTO> videoInfoDTOArrayList = new ArrayList<>();
+    private ArrayList<CustomFieldDTO> customFieldDTOArrayList = new ArrayList<>();
 
     private int videoDuration = 0;
     private int videoPausedPoint = 0;
@@ -228,5 +229,13 @@ public class CategoriesDTO implements Serializable {
 
     public void setProduct(boolean product) {
         isProduct = product;
+    }
+
+    public ArrayList<CustomFieldDTO> getCustomFieldDTOArrayList() {
+        return customFieldDTOArrayList;
+    }
+
+    public void setCustomFieldDTOArrayList(ArrayList<CustomFieldDTO> customFieldDTOArrayList) {
+        this.customFieldDTOArrayList = customFieldDTOArrayList;
     }
 }
