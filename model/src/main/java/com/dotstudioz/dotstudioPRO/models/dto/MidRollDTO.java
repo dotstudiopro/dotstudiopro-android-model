@@ -1,10 +1,12 @@
 package com.dotstudioz.dotstudioPRO.models.dto;
 
+import java.io.Serializable;
+
 /**
  * Created by mohsin on 11-08-2017.
  */
 
-public class MidRollDTO {
+public class MidRollDTO implements Serializable {
 
     private int midRollTime;
     private int noOfMidRollsToPlay;
