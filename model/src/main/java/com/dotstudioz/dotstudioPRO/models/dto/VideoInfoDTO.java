@@ -19,6 +19,7 @@ public class VideoInfoDTO {
     private String writterDirector = "";
     private int ratingValue;
     private String poster;
+    private String wallpaper;
     private boolean isYoutubeVideo;
     private String youtubeVideoID;
     private String vodDir;
@@ -177,6 +178,14 @@ public class VideoInfoDTO {
 
     public void setPoster(String poster) {
         this.poster = poster;
+    }
+
+    public String getWallpaper() {
+        return wallpaper;
+    }
+
+    public void setWallpaper(String wallpaper) {
+        this.wallpaper = wallpaper;
     }
 
     public boolean isYoutubeVideo() {
