@@ -11,6 +11,7 @@ import java.util.Set;
 public class SpotLightCategoriesDTO implements Serializable {
     private String categoryName;
     private String categoryValue;
+    private String categoryDescription;
     private String parentCategoryName;
     private String parentCategorySlug;
     private String categoryId;
@@ -57,6 +58,14 @@ public class SpotLightCategoriesDTO implements Serializable {
 
     public void setCategoryValue(String categoryValue) {
         this.categoryValue = categoryValue;
+    }
+
+    public String getCategoryDescription() {
+        return categoryDescription;
+    }
+
+    public void setCategoryDescription(String categoryDescription) {
+        this.categoryDescription = categoryDescription;
     }
 
     public String getParentCategoryName() {
