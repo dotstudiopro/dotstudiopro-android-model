@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class CategoriesDTO implements Serializable {
     private String categoryName;
+    private String categoryDescription;
     private String categorySlug;
     private String categoryValue;
     private String categoryPoster;
@@ -39,8 +40,15 @@ public class CategoriesDTO implements Serializable {
 
 
     public String getCategoryName() {
-
         return categoryName;
+    }
+
+    public void setCategoryDescription(String categoryDescription) {
+        this.categoryDescription = categoryDescription;
+    }
+
+    public String getCategoryDescription() {
+        return categoryDescription;
     }
 
     public void setCategoryName(String categoryName) {
